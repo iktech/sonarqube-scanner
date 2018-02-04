@@ -20,6 +20,9 @@ spec:
   strategy:
     type: Docker
     dockerStrategy:
+      buildArgs:
+      - name: "SONARQUBE_SCANNER_VERSION"
+        value: "3.0.3.778"
   output:
     to:
       kind: ImageStreamTag
