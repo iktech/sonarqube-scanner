@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM openjdk:11-jdk
 LABEL maintainer="Igor Kolomiyets <igor.kolomiyets@iktech.io>"
 
 RUN apt-get install curl  \
