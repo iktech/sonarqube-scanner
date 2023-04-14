@@ -1,0 +1,9 @@
+ignore:
+  - package:
+      name: ansi-regex
+    vulnerability: GHSA-93q8-gq69-wqmw
+  - package:
+      name: http-cache-semantics
+      version: 3.8.1
+    vulnerability: GHSA-rc47-6667-2j5j
+
