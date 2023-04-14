@@ -90,7 +90,7 @@ podTemplate(label: 'buildkit-pod', cloud: 'kubernetes', serviceAccount: 'jenkins
                             --local dockerfile=. \
                             --export-cache type=local,dest=/tmp/buildkit/cache \
                             --import-cache type=local,src=/tmp/buildkit/cache \
-                            --output type=image,name=${image},push=true \
+                            --output type=image,name=${image}:${tag},push=true \
                             --opt network=host \
 							--opt build-arg:SONARQUBE_SCANNER_VERSION=${version}
                         """
