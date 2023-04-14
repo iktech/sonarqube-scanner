@@ -14,7 +14,7 @@ podTemplate(label: 'buildkit-pod', cloud: 'kubernetes', serviceAccount: 'jenkins
     secretVolume(mountPath: '/tmp/docker', secretName: 'docker-config'),
   ]
 ) {
-    node('gopod') {
+    node('buildkit-pod') {
         stage('Prepare') {
             sh '''
 				mkdir -p ~/.ssh
