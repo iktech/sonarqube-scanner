@@ -1,8 +1,7 @@
-version = "4.8.0.2856"
-namespace = "jenkins"
-repositoryServer = "docker-registry-publish.iktech.io"
+version = "5.0.1.3006"
+namespace = "iktech"
 projectName = "sonarqube-scanner"
-image = "${repositoryServer}/${namespace}/${projectName}"
+image = "${namespace}/${projectName}"
 def dockerImage
 
 podTemplate(label: 'buildkit-pod', cloud: 'kubernetes', serviceAccount: 'jenkins',
