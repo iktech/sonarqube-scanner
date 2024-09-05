@@ -3,7 +3,7 @@ LABEL maintainer="Igor Kolomiyets <igor.kolomiyets@iktech.io>"
 
 RUN apt-get update -y
 RUN apt-get install curl zip -y
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_20.x | bash -
 RUN apt-get install nodejs
 RUN apt-get upgrade -y
 
