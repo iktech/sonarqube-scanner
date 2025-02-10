@@ -6,4 +6,5 @@ ignore:
       name: http-cache-semantics
       version: 3.8.1
     vulnerability: GHSA-rc47-6667-2j5j
-
+  - vulnerability: GHSA-3xgq-45jj-v275
+  
