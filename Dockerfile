@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21.0.6_7-jre
+FROM eclipse-temurin:25.0.2_10-jre
 LABEL maintainer="Igor Kolomiyets <igor.kolomiyets@iktech.io>"
 
 RUN apt-get update -y
@@ -10,7 +10,7 @@ RUN apt-get upgrade -y
 ARG SONARQUBE_SCANNER_VERSION=5.0.1.3006
 
 WORKDIR /opt
-RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONARQUBE_SCANNER_VERSION}-linux-x64.zip
+RUN curl https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONARQUBE_SCANNER_VERSION}-linux-x64.zip -O
 RUN unzip sonar-scanner-cli-${SONARQUBE_SCANNER_VERSION}-linux-x64.zip
 RUN rm sonar-scanner-cli-${SONARQUBE_SCANNER_VERSION}-linux-x64.zip
 RUN ln -s sonar-scanner-${SONARQUBE_SCANNER_VERSION}-linux-x64 sonar-scanner
