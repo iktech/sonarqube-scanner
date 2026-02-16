@@ -15,7 +15,7 @@ RUN unzip sonar-scanner-cli-${SONARQUBE_SCANNER_VERSION}-linux-x64.zip
 RUN rm sonar-scanner-cli-${SONARQUBE_SCANNER_VERSION}-linux-x64.zip
 RUN ln -s sonar-scanner-${SONARQUBE_SCANNER_VERSION}-linux-x64 sonar-scanner
 RUN mkdir -p /opt/sonar-scanner/conf
-ADD sonar-scanner.properties /opt/sonar-scanner/conf
+COPY sonar-scanner.properties /opt/sonar-scanner/conf
 
 VOLUME /opt/sonar-scanner/conf
 

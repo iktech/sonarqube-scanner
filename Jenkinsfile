@@ -60,7 +60,7 @@ podTemplate(label: 'buildkit-pod', cloud: 'kubernetes', serviceAccount: 'jenkins
 				try {
 					sh """
 						wget https://iktech-public-dl.s3.eu-west-1.amazonaws.com/grype/grype.tmpl
-						GRYPE_MATCH_GOLANG_USING_CPES=false /usr/local/bin/grype oci-archive:/tmp/image.tar -f high --only-fixed -o template --file report.html -t grype.tmpl -c .grype.yaml
+						GRYPE_MATCH_GOLANG_USING_CPES=false /usr/local/bin/grype oci-archive:/tmp/image.tar -f high --only-fixed -o template --file report.html -t grype.tmpl -c grype.yaml
 					"""
 				} catch (error) {
 					slackSend color: "danger", message: "Grype scan has failed - ${env.JOB_NAME} build number ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"

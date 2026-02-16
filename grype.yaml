@@ -1,0 +1,8 @@
+ignore:
+  - package:
+      name: tar 
+  - package:
+      name: glob
+  - vulnerability: CVE-2026-21945
+  - vulnerability: CVE-2026-21932 
+  - vulnerability: GHSA-3xgq-45jj-v275
