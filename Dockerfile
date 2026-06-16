@@ -1,4 +1,4 @@
-FROM eclipse-temurin:25.0.2_10-jre
+FROM eclipse-temurin:25.0.3_9-jre
 LABEL maintainer="Igor Kolomiyets <igor.kolomiyets@iktech.io>"
 
 RUN apt-get update -y

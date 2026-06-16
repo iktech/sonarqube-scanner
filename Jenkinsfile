@@ -1,4 +1,4 @@
-version = "8.0.1.6346"
+version = "8.1.0.6389"
 namespace = "iktech"
 projectName = "sonarqube-scanner"
 image = "${namespace}/${projectName}"
