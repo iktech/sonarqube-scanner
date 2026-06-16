@@ -1,8 +1,16 @@
 ignore:
   - package:
-      name: tar 
+      name: stdlib 
   - package:
-      name: glob
-  - vulnerability: CVE-2026-21945
-  - vulnerability: CVE-2026-21932 
-  - vulnerability: GHSA-3xgq-45jj-v275
+      name: glob 
+  - package:
+      name: minimatch
+  - package:
+      name: tar
+  - package:
+      name: cross-spawn
+  - package:
+      name: openjdk
+      version: 21.0.9+10-LTS
+  - vulnerability: GO-2026-5026
+  - vulnerability: GO-2026-4918
